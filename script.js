@@ -45,6 +45,22 @@ resetBtn.addEventListener("click", function () {
   }
 });
 
+// configuring easy button
+let easyBtn = document.querySelector("#easyBtn");
+
+easyBtn.addEventListener("click", function () {
+  numPanels = 3;
+  colors = generateRandomColors(numPanels);
+
+  for (let i = 0; i < panels.length; i++) {
+    if (colors[i]) {
+      panels[i].style.background = colors[i];
+    } else {
+      panels[i].style.display = "none";
+    }
+  }
+});
+
 // On Start
 let panels = document.querySelectorAll(".panels");
 let numPanels = panels.length;
