@@ -1,17 +1,27 @@
 body {
   background: #232323;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  letter-spacing: 1px; }
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+}
 
 h1 {
   color: white;
   text-transform: uppercase;
   text-align: center;
-  font-weight: normal; }
-  h1 #colorDisplay {
-    font-size: 200%;
-    font-weight: unset; }
+  font-weight: normal;
+  margin: 0;
+  padding: 10px 0;
+}
+h1 #colorDisplay {
+  font-size: 200%;
+  font-weight: unset;
+}
 
+#container {
+  max-width: 750px;
+  margin: 10px auto;
+}
 #container .panels {
   background: white;
   padding-bottom: 30%;
@@ -19,6 +29,30 @@ h1 {
   margin: 1.66%;
   float: left;
   transition: background 0.6s;
-  border-radius: 50% 50% 0% 50%; }
+  border-radius: 50% 50% 0% 50%;
+}
+
+#stripe {
+  text-align: center;
+  background: white;
+  height: 30px;
+  font-weight: 700;
+}
+#stripe button {
+  background: none;
+  height: 100%;
+  outline: none;
+  font-weight: inherit;
+  border: none;
+  transition: all 0.3s;
+}
+#stripe button:hover {
+  background: #232323;
+  color: white;
+}
+#stripe #message {
+  display: inline-block;
+  width: 30%;
+}
 
 /*# sourceMappingURL=style.css.map */
