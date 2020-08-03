@@ -61,6 +61,19 @@ easyBtn.addEventListener("click", function () {
   }
 });
 
+// configuring hard button
+let hardBtn = document.querySelector("#hardBtn");
+
+hardBtn.addEventListener("click", function () {
+  numPanels = 6;
+  colors = generateRandomColors(numPanels);
+
+  for (let i = 0; i < panels.length; i++) {
+    panels[i].style.background = colors[i];
+    panels[i].style.display = "block";
+  }
+});
+
 // On Start
 let panels = document.querySelectorAll(".panels");
 let numPanels = panels.length;
