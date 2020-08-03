@@ -25,7 +25,7 @@ const onCorrectAnswer = (color, panels, message, reset) => {
     panels[i].style.background = color;
   }
   message.textContent = "Correct!";
-  reset.textContent = "Play Again?";
+  reset.textContent = "PLAY AGAIN?";
 };
 
 // function for changes if answer is WRONG!
@@ -41,6 +41,8 @@ let resetBtn = document.querySelector("#resetBtn");
 
 resetBtn.addEventListener("click", function () {
   colors = generateRandomColors(numPanels);
+  message.textContent = "";
+  resetBtn.textContent = "NEW COLORS"
 
   for (let i = 0; i < numPanels; i++) {
     panels[i].style.background = colors[i];
@@ -56,6 +58,9 @@ let easyBtn = document.querySelector("#easyBtn");
 easyBtn.addEventListener("click", function () {
   numPanels = 3;
   colors = generateRandomColors(numPanels);
+
+  message.textContent = "";
+  resetBtn.textContent = "NEW COLORS"
 
   for (let i = 0; i < panels.length; i++) {
     if (colors[i]) {
@@ -75,6 +80,9 @@ let hardBtn = document.querySelector("#hardBtn");
 hardBtn.addEventListener("click", function () {
   numPanels = 6;
   colors = generateRandomColors(numPanels);
+
+  message.textContent = "";
+  resetBtn.textContent = "NEW COLORS"
 
   for (let i = 0; i < panels.length; i++) {
     panels[i].style.background = colors[i];
