@@ -14,7 +14,7 @@ h1 {
   margin: 0;
   padding: 10px 0;
 }
-h1 #colorDisplay {
+h1 #rgbDisplay {
   font-size: 200%;
   font-weight: unset;
 }

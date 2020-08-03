@@ -43,6 +43,9 @@ resetBtn.addEventListener("click", function () {
   for (let i = 0; i < numPanels; i++) {
     panels[i].style.background = colors[i];
   }
+
+  pickedColor = pickColor(colors);
+  rgbDisplay.textContent = pickedColor;
 });
 
 // configuring easy button
@@ -59,6 +62,9 @@ easyBtn.addEventListener("click", function () {
       panels[i].style.display = "none";
     }
   }
+
+  pickedColor = pickColor(colors);
+  rgbDisplay.textContent = pickedColor;
 });
 
 // configuring hard button
@@ -72,6 +78,9 @@ hardBtn.addEventListener("click", function () {
     panels[i].style.background = colors[i];
     panels[i].style.display = "block";
   }
+
+  pickedColor = pickColor(colors);
+  rgbDisplay.textContent = pickedColor;
 });
 
 // On Start
@@ -83,3 +92,8 @@ colors = generateRandomColors(numPanels);
 for (let i = 0; i < numPanels; i++) {
   panels[i].style.background = colors[i];
 }
+
+let pickedColor = pickColor(colors);
+
+let rgbDisplay = document.querySelector("#rgbDisplay");
+rgbDisplay.textContent = pickedColor;
