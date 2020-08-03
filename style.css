@@ -1,3 +1,24 @@
+body {
+  background: #232323;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  letter-spacing: 1px; }
 
+h1 {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: normal; }
+  h1 #colorDisplay {
+    font-size: 200%;
+    font-weight: unset; }
+
+#container .panels {
+  background: white;
+  padding-bottom: 30%;
+  width: 30%;
+  margin: 1.66%;
+  float: left;
+  transition: background 0.6s;
+  border-radius: 50% 50% 0% 50%; }
 
 /*# sourceMappingURL=style.css.map */
