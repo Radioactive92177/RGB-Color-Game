@@ -34,6 +34,8 @@ const onWrongAnswer = (panel, message) => {
   message.textContent = "Try Again!";
 };
 
+// -----BUTTONS CONFIGURATIONS----------------------------
+
 // configuring reset button
 let resetBtn = document.querySelector("#resetBtn");
 
@@ -83,6 +85,8 @@ hardBtn.addEventListener("click", function () {
   rgbDisplay.textContent = pickedColor;
 });
 
+// ----------MAIN PROGRAM--------------------------------
+
 // On Start
 let panels = document.querySelectorAll(".panels");
 let numPanels = panels.length;
@@ -97,3 +101,19 @@ let pickedColor = pickColor(colors);
 
 let rgbDisplay = document.querySelector("#rgbDisplay");
 rgbDisplay.textContent = pickedColor;
+
+// ---------PANELS CONFIGURATION--------------------------
+let message = document.querySelector("#message");
+
+for (let i = 0; i < numPanels; i++) {
+  panels[i].addEventListener("click", function () {
+    let panel = this;
+    let panelColor = panel.style.background;
+
+    if (panelColor == pickedColor) {
+      onCorrectAnswer(panelColor, panels, message, resetBtn);
+    } else {
+      onWrongAnswer(panel, message);
+    }
+  });
+}
