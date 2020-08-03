@@ -26,6 +26,7 @@ const onCorrectAnswer = (color, panels, message, reset) => {
   }
   message.textContent = "Correct!";
   reset.textContent = "PLAY AGAIN?";
+  h1.style.background = color;
 };
 
 // function for changes if answer is WRONG!
@@ -44,6 +45,8 @@ resetBtn.addEventListener("click", function () {
   message.textContent = "";
   resetBtn.textContent = "NEW COLORS";
 
+  h1.style.background = "#232323";
+
   for (let i = 0; i < numPanels; i++) {
     panels[i].style.background = colors[i];
   }
@@ -58,6 +61,8 @@ let easyBtn = document.querySelector("#easyBtn");
 easyBtn.addEventListener("click", function () {
   hardBtn.classList.remove("selected");
   this.classList.add("selected");
+
+  h1.style.background = "#232323";
 
   message.textContent = "";
   resetBtn.textContent = "NEW COLORS";
@@ -83,6 +88,8 @@ let hardBtn = document.querySelector("#hardBtn");
 hardBtn.addEventListener("click", function () {
   easyBtn.classList.remove("selected");
   this.classList.add("selected");
+
+  h1.style.background = "#232323";
 
   message.textContent = "";
   resetBtn.textContent = "NEW COLORS";
@@ -118,6 +125,7 @@ rgbDisplay.textContent = pickedColor;
 
 // ---------PANELS CONFIGURATION--------------------------
 let message = document.querySelector("#message");
+let h1 = document.querySelector("h1");
 
 for (let i = 0; i < numPanels; i++) {
   panels[i].addEventListener("click", function () {
