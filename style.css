@@ -32,12 +32,17 @@ h1 #rgbDisplay {
   transition: background 0.6s;
   border-radius: 50% 50% 0% 50%;
 }
+#container .panels:hover {
+  cursor: pointer;
+}
 
 #stripe {
   text-align: center;
   background: white;
   height: 30px;
   font-weight: 700;
+  color: black;
+  text-transform: uppercase;
 }
 #stripe button {
   background: none;
@@ -51,6 +56,10 @@ h1 #rgbDisplay {
   background: #232323;
   color: white;
   cursor: pointer;
+}
+#stripe .selected {
+  color: white;
+  background: #232323;
 }
 #stripe #message {
   display: inline-block;

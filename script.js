@@ -42,7 +42,7 @@ let resetBtn = document.querySelector("#resetBtn");
 resetBtn.addEventListener("click", function () {
   colors = generateRandomColors(numPanels);
   message.textContent = "";
-  resetBtn.textContent = "NEW COLORS"
+  resetBtn.textContent = "NEW COLORS";
 
   for (let i = 0; i < numPanels; i++) {
     panels[i].style.background = colors[i];
@@ -56,11 +56,14 @@ resetBtn.addEventListener("click", function () {
 let easyBtn = document.querySelector("#easyBtn");
 
 easyBtn.addEventListener("click", function () {
-  numPanels = 3;
-  colors = generateRandomColors(numPanels);
+  hardBtn.classList.remove("selected");
+  this.classList.add("selected");
 
   message.textContent = "";
-  resetBtn.textContent = "NEW COLORS"
+  resetBtn.textContent = "NEW COLORS";
+
+  numPanels = 3;
+  colors = generateRandomColors(numPanels);
 
   for (let i = 0; i < panels.length; i++) {
     if (colors[i]) {
@@ -78,11 +81,14 @@ easyBtn.addEventListener("click", function () {
 let hardBtn = document.querySelector("#hardBtn");
 
 hardBtn.addEventListener("click", function () {
-  numPanels = 6;
-  colors = generateRandomColors(numPanels);
+  easyBtn.classList.remove("selected");
+  this.classList.add("selected");
 
   message.textContent = "";
-  resetBtn.textContent = "NEW COLORS"
+  resetBtn.textContent = "NEW COLORS";
+
+  numPanels = 6;
+  colors = generateRandomColors(numPanels);
 
   for (let i = 0; i < panels.length; i++) {
     panels[i].style.background = colors[i];
