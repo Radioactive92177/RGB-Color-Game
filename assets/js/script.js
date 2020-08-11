@@ -8,6 +8,7 @@ const generateRandomColors = (num) => {
     let b = Math.floor(Math.random() * 256 + 0); // green
 
     let rgb = "rgb(" + r + ", " + g + ", " + b + ")"; // line to debug
+
     colorArray.push(rgb);
   }
   return colorArray;
